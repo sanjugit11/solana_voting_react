@@ -1,123 +1,73 @@
 {
-  "address": "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF",
-  "metadata": {
-    "name": "votingdapp",
-    "version": "0.1.0",
-    "spec": "0.1.0",
-    "description": "Created with Anchor"
-  },
+  "version": "0.1.0",
+  "name": "votingdapp",
   "instructions": [
     {
       "name": "close",
-      "discriminator": [
-        98,
-        165,
-        201,
-        177,
-        108,
-        65,
-        206,
-        96
-      ],
       "accounts": [
         {
           "name": "payer",
-          "writable": true,
-          "signer": true
+          "isMut": true,
+          "isSigner": true
         },
         {
           "name": "votingdapp",
-          "writable": true
+          "isMut": true,
+          "isSigner": false
         }
       ],
       "args": []
     },
     {
       "name": "decrement",
-      "discriminator": [
-        106,
-        227,
-        168,
-        59,
-        248,
-        27,
-        150,
-        101
-      ],
       "accounts": [
         {
           "name": "votingdapp",
-          "writable": true
+          "isMut": true,
+          "isSigner": false
         }
       ],
       "args": []
     },
     {
       "name": "increment",
-      "discriminator": [
-        11,
-        18,
-        104,
-        9,
-        104,
-        174,
-        59,
-        33
-      ],
       "accounts": [
         {
           "name": "votingdapp",
-          "writable": true
+          "isMut": true,
+          "isSigner": false
         }
       ],
       "args": []
     },
     {
       "name": "initialize",
-      "discriminator": [
-        175,
-        175,
-        109,
-        31,
-        13,
-        152,
-        155,
-        237
-      ],
       "accounts": [
         {
           "name": "payer",
-          "writable": true,
-          "signer": true
+          "isMut": true,
+          "isSigner": true
         },
         {
           "name": "votingdapp",
-          "writable": true,
-          "signer": true
+          "isMut": true,
+          "isSigner": true
         },
         {
-          "name": "system_program",
-          "address": "11111111111111111111111111111111"
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
         }
       ],
       "args": []
     },
     {
       "name": "set",
-      "discriminator": [
-        198,
-        51,
-        53,
-        241,
-        116,
-        29,
-        126,
-        194
-      ],
       "accounts": [
         {
           "name": "votingdapp",
-          "writable": true
+          "isMut": true,
+          "isSigner": false
         }
       ],
       "args": [
@@ -131,21 +81,6 @@
   "accounts": [
     {
       "name": "Votingdapp",
-      "discriminator": [
-        255,
-        176,
-        4,
-        245,
-        188,
-        253,
-        124,
-        25
-      ]
-    }
-  ],
-  "types": [
-    {
-      "name": "Votingdapp",
       "type": {
         "kind": "struct",
         "fields": [
@@ -156,5 +91,8 @@
         ]
       }
     }
-  ]
+  ],
+  "metadata": {
+    "address": "8wH5622G77uLMqUxgdMHtxTVojRRsBcsgYWLGaRUHdsK"
+  }
 }

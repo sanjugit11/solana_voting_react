@@ -18,3 +18,101 @@ body,
 .wallet-adapter-button {
   font-family: inherit !important;
 }
+
+.buttonVote {
+  border: 2px solid black; 
+  border-radius: 5px;       
+  padding: 10px 20px;      
+  background-color: #f9f9f9;
+  color: #000;             
+  font-size: 16px;          
+  cursor: pointer;         
+  transition: all 0.3s ease; 
+  font-weight: bold;       
+}
+.section1{
+  border: 2px solid rgb(181, 177, 177); 
+  border-radius: 5px;  
+  padding: 20px;
+  background-color: rgb(254, 203, 170);
+}
+.section2{
+  border: 2px solid rgb(181, 177, 177); 
+  border-radius: 5px;  
+  padding: 20px;
+  background-color: rgb(231, 199, 94);
+}
+.section3{
+  border: 2px solid rgb(181, 177, 177); 
+  border-radius: 5px;  
+  padding: 20px;
+  background-color: rgb(162, 245, 175);
+
+}
+
+.input1{
+  border: 2px solid rgb(231, 177, 177); 
+}
+.container{
+  display: flex; /* Enables flexbox */
+  justify-content: space-between; /* Adjusts spacing between items */
+  align-items: center; /* Aligns items vertically in the center */
+  gap: 20px; /* Adds spacing between components */
+}
+.continer2{
+  display: flex; /* Enables flexbox */
+  justify-content: space-between; /* Adjusts spacing between items */
+  /* align-items: center;  */
+}
+.message {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  text-align: center;
+  margin: 20px auto; /* Center the div and add some margin */
+  font-size: 18px; /* Set a readable font size */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Dark gray for better readability */
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 10px 20px; /* Add padding for a better look */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 80%; /* Limit width for readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 13px;
+  text-align: left;
+}
+
+.dataTable thead tr {
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+}
+
+.dataTable th, .dataTable td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+}
+
+.dataTable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.dataTable tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.dataTable tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.dataTable th {
+  font-weight: bold;
+  color: #333;
+}

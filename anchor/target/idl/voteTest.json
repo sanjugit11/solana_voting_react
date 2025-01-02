@@ -1,0 +1,221 @@
+{
+    "version": "0.1.0",
+    "name": "voting",
+    "instructions": [
+        {
+            "name": "initializePoll",
+            "accounts": [
+                {
+                    "name": "signer",
+                    "isMut": true,
+                    "isSigner": true
+                },
+                {
+                    "name": "poll",
+                    "isMut": true,
+                    "isSigner": false
+                },
+                {
+                    "name": "systemProgram",
+                    "isMut": false,
+                    "isSigner": false
+                }
+            ],
+            "args": [
+                {
+                    "name": "pollId",
+                    "type": "u64"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "pollStart",
+                    "type": "i64"
+                },
+                {
+                    "name": "pollEnd",
+                    "type": "i64"
+                }
+            ]
+        },
+        {
+            "name": "initializeCandidate",
+            "accounts": [
+                {
+                    "name": "signer",
+                    "isMut": true,
+                    "isSigner": true
+                },
+                {
+                    "name": "poll",
+                    "isMut": true,
+                    "isSigner": false
+                },
+                {
+                    "name": "candidate",
+                    "isMut": true,
+                    "isSigner": false
+                },
+                {
+                    "name": "systemProgram",
+                    "isMut": false,
+                    "isSigner": false
+                }
+            ],
+            "args": [
+                {
+                    "name": "candidateName",
+                    "type": "string"
+                },
+                {
+                    "name": "pollId",
+                    "type": "u64"
+                }
+            ]
+        },
+        {
+            "name": "vote",
+            "accounts": [
+                {
+                    "name": "signer",
+                    "isMut": true,
+                    "isSigner": true
+                },
+                {
+                    "name": "poll",
+                    "isMut": false,
+                    "isSigner": false
+                },
+                {
+                    "name": "candidate",
+                    "isMut": true,
+                    "isSigner": false
+                },
+                {
+                    "name": "voterRecord",
+                    "isMut": true,
+                    "isSigner": false
+                },
+                {
+                    "name": "systemProgram",
+                    "isMut": false,
+                    "isSigner": false
+                }
+            ],
+            "args": [
+                {
+                    "name": "candidateName",
+                    "type": "string"
+                },
+                {
+                    "name": "pollId",
+                    "type": "u64"
+                }
+            ]
+        }
+    ],
+    "accounts": [
+        {
+            "name": "Poll",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "pollId",
+                        "type": "u64"
+                    },
+                    {
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "name": "pollStart",
+                        "type": "i64"
+                    },
+                    {
+                        "name": "pollEnd",
+                        "type": "i64"
+                    },
+                    {
+                        "name": "candidateAmount",
+                        "type": "u64"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Candidate",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "candidateName",
+                        "type": "string"
+                    },
+                    {
+                        "name": "candidateVotes",
+                        "type": "u64"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "VoterRecord",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "hasVoted",
+                        "type": "bool"
+                    },
+                    {
+                        "name": "voteTimestamp",
+                        "type": "i64"
+                    }
+                ]
+            }
+        }
+    ],
+    "errors": [
+        {
+            "code": 6000,
+            "name": "InvalidPollDuration",
+            "msg": "Poll duration is invalid. Start time must be less than end time."
+        },
+        {
+            "code": 6001,
+            "name": "PollAlreadyStarted",
+            "msg": "The poll has already started. Candidates cannot be added."
+        },
+        {
+            "code": 6002,
+            "name": "PollNotActive",
+            "msg": "Poll is not active."
+        },
+        {
+            "code": 6003,
+            "name": "AlreadyVoted",
+            "msg": "You have already voted in this poll."
+        },
+        {
+            "code": 6004,
+            "name": "InvalidCandidateName",
+            "msg": "Candidate name is invalid."
+        },
+        {
+            "code": 6005,
+            "name": "DescriptionTooLong",
+            "msg": "Description exceeds the maximum allowed length."
+        },
+        {
+            "code": 6006,
+            "name": "MaxCandidatesReached",
+            "msg": "The maximum number of candidates for this poll has been reached."
+        }
+    ],
+    "metadata": {
+        "address": "Dvr7cy9KKAtxKtTz4eSqYG9dwvEVzvLSViEFE7DerSSS"
+      }
+}

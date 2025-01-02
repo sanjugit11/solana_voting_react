@@ -7,8 +7,9 @@ import { VotingdappCreate, VotingdappList } from './votingdapp-ui'
 
 export default function VotingdappFeature() {
   const { publicKey } = useWallet()
+  console.log("publicKey==>",publicKey  );
   const { programId } = useVotingdappProgram()
-
+  console.log("publicKey==>",publicKey ,"programId==>",programId );
   return publicKey ? (
     <div>
       <AppHero

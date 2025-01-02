@@ -16,7 +16,7 @@ export function UiLayout({ children, links }: { children: ReactNode; links: { la
           <Link className="btn btn-ghost normal-case text-xl" to="/">
             <img className="h-4 md:h-6" alt="Logo" src="/logo.png" />
           </Link>
-          <ul className="menu menu-horizontal px-1 space-x-2">
+          <ul className="menu menu-horizontal px-1 space-x-2 text-black">
             {links.map(({ label, path }) => (
               <li key={path}>
                 <Link className={pathname.startsWith(path) ? 'active' : ''} to={path}>

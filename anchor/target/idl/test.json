@@ -1,0 +1,25 @@
+{
+    "version": "0.1.0",
+    "name": "hello_anchor",
+    "instructions": [
+        {
+            "name": "sayHello",
+            "accounts": [
+                {
+                    "name": "user",
+                    "isMut": false,
+                    "isSigner": true
+                }
+            ],
+            "args": [
+                {
+                    "name": "message",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "address": "qHywshUXJh2tDcMBmCQM65nqqL2kbpxHjDhZjgiBG2E"
+      }
+}

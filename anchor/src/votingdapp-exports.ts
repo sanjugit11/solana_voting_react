@@ -9,6 +9,7 @@ export { Votingdapp, VotingdappIDL }
 
 // The programId is imported from the program IDL.
 export const VOTINGDAPP_PROGRAM_ID = new PublicKey(VotingdappIDL.address)
+console.log("VOTINGDAPP_PROGRAM_ID==>",VOTINGDAPP_PROGRAM_ID);
 
 // This is a helper function to get the Votingdapp Anchor program.
 export function getVotingdappProgram(provider: AnchorProvider, address?: PublicKey) {
@@ -19,9 +20,11 @@ export function getVotingdappProgram(provider: AnchorProvider, address?: PublicK
 export function getVotingdappProgramId(cluster: Cluster) {
   switch (cluster) {
     case 'devnet':
+      return new PublicKey('8zjxpHeGB2kpNhgPiXjzj4NkeFeNA6EMtBXH97PMAagY')
     case 'testnet':
       // This is the program ID for the Votingdapp program on devnet and testnet.
-      return new PublicKey('coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF')
+      // return new PublicKey('coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF')
+      return new PublicKey('8zjxpHeGB2kpNhgPiXjzj4NkeFeNA6EMtBXH97PMAagY')
     case 'mainnet-beta':
     default:
       return VOTINGDAPP_PROGRAM_ID

@@ -10,12 +10,16 @@ import { useAnchorProvider } from '../solana/solana-provider'
 import { useTransactionToast } from '../ui/ui-layout'
 
 export function useVotingdappProgram() {
+  console.log("programIdprogramId==>============================");
+  
   const { connection } = useConnection()
   const { cluster } = useCluster()
   const transactionToast = useTransactionToast()
   const provider = useAnchorProvider()
   const programId = useMemo(() => getVotingdappProgramId(cluster.network as Cluster), [cluster])
+  console.log("programIdprogramId==>",programId);
   const program = useMemo(() => getVotingdappProgram(provider, programId), [provider, programId])
+  console.log("programprogram777==>",program);
 
   const accounts = useQuery({
     queryKey: ['votingdapp', 'all', { cluster }],

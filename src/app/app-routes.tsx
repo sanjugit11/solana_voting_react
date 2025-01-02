@@ -5,7 +5,9 @@ import { Navigate, RouteObject, useRoutes } from 'react-router-dom'
 const AccountListFeature = lazy(() => import('../components/account/account-list-feature'))
 const AccountDetailFeature = lazy(() => import('../components/account/account-detail-feature'))
 const ClusterFeature = lazy(() => import('../components/cluster/cluster-feature'))
-const VotingdappFeature = lazy(() => import('../components/votingdapp/votingdapp-feature'))
+// const VotingdappFeature = lazy(() => import('../components/votingdapp/votingdapp-feature'))
+// const VotingdappFeature = lazy(() => import('../components/voteVote/votee'))
+const VotingdappFeature = lazy(() => import('../components/voteVote/voteTest'))
 const DashboardFeature = lazy(() => import('../components/dashboard/dashboard-feature'))
 
 const links: { label: string; path: string }[] = [
