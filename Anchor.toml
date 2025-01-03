@@ -1,0 +1,26 @@
+[toolchain]
+anchor_version = "0.27.0"
+solana_version = "1.18.8"
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs]
+[programs.localnet]
+demo_program = "D95hi3k5S99tVrT2MDsVFZGQdMBtafjWuNwXQYXXKuRY"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "ts-mocha -p ./protocol/ts/tsconfig.node.json -t 1000000 protocol/ts/tests/**/*.test.ts"
+demo_program = "ts-mocha -p ./protocol/ts/tsconfig.node.json -t 1000000 protocol/ts/tests/demo-program.test.ts"
+
+[workspace]
+members = [ "protocol/programs/demo-program" ]
+types = "protocol/ts/src/idl"
