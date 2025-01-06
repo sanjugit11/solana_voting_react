@@ -1,5 +1,6 @@
 # Create Anchor dApp
-
+voteTest.tsx   ## will be provided
+npm run dev // to start
 This is a [Turborepo](https://turbo.build/repo) monorepo for managing your Solana projects built with the anchor framework. If you are new to turborepo, you can start by reading the [docs](https://turbo.build/repo/docs).
 
 We would be using `pnpm` for the sake of this doc, but you can follow along with your favorite package manager.

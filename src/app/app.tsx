@@ -3,8 +3,8 @@ import { ClusterProvider } from '../components/cluster/cluster-data-access'
 import { SolanaProvider } from '../components/solana/solana-provider'
 import { AppRoutes } from './app-routes'
 import { Provider } from 'react-redux'
-import { persistor, store } from '@/reduxSetup/store'
-import { PersistGate } from 'redux-persist/integration/react';
+import { persistor, store } from '../reduxSetup/store'
+import { PersistGate } from 'redux-persist/integration/react'
 
 const client = new QueryClient()
 
